@@ -282,6 +282,28 @@ p {
   color: var(--primary);
 }
 
+@media (max-width: 480px) {
+  .brand {
+    gap: 8px;
+    font-size: 1.0625rem;
+    line-height: 1.15;
+  }
+
+  .brand-mark {
+    width: 28px;
+    height: 28px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .header-phone strong {
+    font-size: 0.9375rem;
+    white-space: nowrap;
+  }
+}
+
 .header-phone .icon {
   width: 20px;
   height: 20px;

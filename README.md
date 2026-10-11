@@ -1,3 +1,3 @@
-# Invelsoft LLP Website
+# Software License Direct
 
-Official website for Invelsoft LLP.
+Website for Software License Direct.

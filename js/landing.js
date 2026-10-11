@@ -47,7 +47,7 @@
     document.querySelector("[data-headline]").textContent = variant.headline;
     document.querySelector("[data-headline-accent]").textContent = variant.accent;
     if (variant.product) productSelect.value = variant.product;
-    document.title = `${variant.headline} – Invelsoft`;
+    document.title = `${variant.headline} – Software License Direct`;
   }
 
   document.querySelectorAll("[data-product]").forEach((link) => {
@@ -92,7 +92,7 @@
 
   function readAttribution() {
     try {
-      return JSON.parse(sessionStorage.getItem("invelsoft_attribution")) || {};
+      return JSON.parse(sessionStorage.getItem("sld_attribution")) || {};
     } catch (error) {
       return {};
     }

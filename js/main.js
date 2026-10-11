@@ -34,9 +34,9 @@
     });
 
     const isAdClick = Object.keys(tracking).length > 0;
-    if (isAdClick || !sessionStorage.getItem("invelsoft_attribution")) {
+    if (isAdClick || !sessionStorage.getItem("sld_attribution")) {
       sessionStorage.setItem(
-        "invelsoft_attribution",
+        "sld_attribution",
         JSON.stringify({
           ...tracking,
           landing_page: window.location.href,
