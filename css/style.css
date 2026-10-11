@@ -687,8 +687,9 @@ p {
 
 .products {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 380px));
+  justify-content: center;
+  gap: 24px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -788,27 +789,10 @@ p {
   font-weight: 700;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .products {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 560px) {
-  .products {
-    grid-template-columns: none;
-    grid-auto-flow: column;
-    grid-auto-columns: 82%;
-    gap: 14px;
-    margin: 0 -20px;
-    padding: 14px 20px 10px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding-left: 20px;
-  }
-
-  .product {
-    scroll-snap-align: start;
+    grid-template-columns: minmax(0, 440px);
+    gap: 28px;
   }
 }
 

@@ -11,29 +11,23 @@
 
   // Ad groups point their final URL at ?p=<key> so the headline matches the ad.
   const VARIANTS = {
-    m365: {
-      headline: "Genuine Microsoft 365",
-      accent: "set up for you, free",
-      product: "Microsoft 365 Personal / Family",
+    office: {
+      headline: "Buy Genuine Microsoft Office",
+      accent: "free installation included",
     },
-    business: {
-      headline: "Microsoft 365 for Business",
-      accent: "set up for your team, free",
-      product: "Microsoft 365 for Business",
+    m365: {
+      headline: "Buy Microsoft 365 Personal",
+      accent: "free installation included",
+      product: "Microsoft 365 Personal",
     },
     office2024: {
-      headline: "Office Home 2024",
-      accent: "one-time purchase, installed free",
+      headline: "Buy Office Home 2024",
+      accent: "pay once, installation included",
       product: "Office Home 2024",
-    },
-    win11: {
-      headline: "Genuine Windows 11 license",
-      accent: "activated and set up for you",
-      product: "Windows 11 Home / Pro",
     },
     renew: {
       headline: "Renew Microsoft 365",
-      accent: "we'll handle the setup",
+      accent: "price confirmed before you pay",
       product: "Renew Microsoft 365",
     },
   };
@@ -52,7 +46,7 @@
   if (variant) {
     document.querySelector("[data-headline]").textContent = variant.headline;
     document.querySelector("[data-headline-accent]").textContent = variant.accent;
-    productSelect.value = variant.product;
+    if (variant.product) productSelect.value = variant.product;
     document.title = `${variant.headline} – Invelsoft`;
   }
 
