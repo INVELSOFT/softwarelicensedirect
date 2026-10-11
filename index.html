@@ -58,8 +58,9 @@
         </div>
 
         <form class="quote-card" id="quote" aria-labelledby="quote-title">
-          <h2 id="quote-title">Get your price in minutes</h2>
-          <p class="quote-sub">Tell us which product you want to buy and a licensing specialist will call you with the price.</p>
+          <h2 id="quote-title">Request your order</h2>
+          <p class="quote-sub">A licensing specialist will call you to confirm your order and payment.</p>
+          <p class="selected-product" data-selected hidden></p>
 
           <div class="field">
             <label for="name">Full name</label>
@@ -74,7 +75,7 @@
             <input id="email" name="email" type="email" autocomplete="email" maxlength="150" required>
           </div>
           <div class="field">
-            <label for="product">Which product would you like to buy?</label>
+            <label for="product">Which product are you interested in?</label>
             <select id="product" name="product" required>
               <option value="" disabled selected>Choose a product</option>
               <option>Microsoft 365 Personal</option>
@@ -91,7 +92,7 @@
 
           <p class="form-error" role="alert" data-submit-error hidden>Sorry, we couldn't send your request. Please try again or call us at <a href="tel:+18885599749">(888) 559-9749</a>.</p>
 
-          <button class="btn btn-primary" type="submit">Get my price</button>
+          <button class="btn btn-primary" type="submit">Request my license</button>
           <p class="quote-alt" data-chat-only hidden>or <a href="#quote" data-chat>chat with a specialist now</a></p>
           <p class="consent">By submitting, you agree that Software License Direct may contact you by phone or email about your purchase request. Consent is not a condition of purchase. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
         </form>
@@ -139,7 +140,7 @@
               <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Always the latest Office apps</li>
               <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Free installation help</li>
             </ul>
-            <a class="btn btn-primary" href="#quote" data-product="Microsoft 365 Personal">Get this</a>
+            <a class="btn btn-primary" href="#quote" data-product="Microsoft 365 Personal">Order this</a>
           </li>
           <li class="product">
             <span class="icon-tile"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></span>
@@ -151,7 +152,7 @@
               <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Yours to keep</li>
               <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Free installation help</li>
             </ul>
-            <a class="btn btn-outline" href="#quote" data-product="Office Home 2024">Get this</a>
+            <a class="btn btn-outline" href="#quote" data-product="Office Home 2024">Order this</a>
           </li>
         </ul>
         <p class="products-note">Not sure which one is right for you? <a href="#quote" data-product="Not sure — help me choose">Ask a licensing specialist</a></p>

@@ -540,6 +540,16 @@ p {
   padding: 0.9rem;
 }
 
+.selected-product {
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  background: var(--primary-soft);
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
 .quote-alt {
   margin: 14px 0 0;
   text-align: center;

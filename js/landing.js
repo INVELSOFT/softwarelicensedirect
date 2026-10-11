@@ -50,9 +50,32 @@
     document.title = `${variant.headline} – Software License Direct`;
   }
 
+  const PRICES = {
+    "Microsoft 365 Personal": "$99.99 / year",
+    "Office Home 2024": "$149.99 one-time",
+  };
+  const selectedLine = form.querySelector("[data-selected]");
+
+  function showSelected() {
+    const name = productSelect.value;
+    if (!name || name === "Not sure — help me choose") {
+      selectedLine.hidden = true;
+      return;
+    }
+    selectedLine.textContent = PRICES[name]
+      ? `You selected: ${name} — ${PRICES[name]}`
+      : `You selected: ${name}`;
+    selectedLine.hidden = false;
+  }
+
+  productSelect.addEventListener("change", showSelected);
+  showSelected();
+
   document.querySelectorAll("[data-product]").forEach((link) => {
     link.addEventListener("click", () => {
       productSelect.value = link.dataset.product;
+      showSelected();
+      setTimeout(() => form.elements.name.focus({ preventScroll: true }), 600);
     });
   });
 
@@ -147,7 +170,7 @@
       console.error("Lead submission failed", error);
       submitError.hidden = false;
       submitButton.disabled = false;
-      submitButton.textContent = "Get my price";
+      submitButton.textContent = "Request my license";
     }
   });
 })();
